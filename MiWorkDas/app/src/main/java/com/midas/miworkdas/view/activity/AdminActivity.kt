@@ -14,7 +14,7 @@ class AdminActivity : BaseActivity<ActivityAdminBinding, AdminViewModel>() {
         get() = R.layout.activity_admin
 
     override fun observeViewModel() {
-        with(mViewModel){
+        with(mViewModel) {
 
         }
     }

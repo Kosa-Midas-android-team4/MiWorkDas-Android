@@ -15,17 +15,19 @@ class LoginViewModel : BaseViewModel() {
     private val _loginSuccess = MutableLiveData<Login>()
     val loginSuccess: LiveData<Login> get() = _loginSuccess
 
-    fun actionLogin(){
-        addDisposable(repository.login(inputCode.value!!), object: DisposableSingleObserver<Login>(){
-            override fun onSuccess(t: Login) {
-                _loginSuccess.value = t
-            }
+    fun actionLogin() {
+        addDisposable(
+            repository.login(inputCode.value!!),
+            object : DisposableSingleObserver<Login>() {
+                override fun onSuccess(t: Login) {
+                    _loginSuccess.value = t
+                }
 
-            override fun onError(e: Throwable) {
-                onErrorEvent.value = e
-                Log.e("network error","로그인 에러 : $e")
-            }
+                override fun onError(e: Throwable) {
+                    onErrorEvent.value = e
+                    Log.e("network error", "로그인 에러 : $e")
+                }
 
-        })
+            })
     }
 }

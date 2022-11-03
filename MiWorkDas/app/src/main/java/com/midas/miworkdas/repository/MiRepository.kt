@@ -9,7 +9,7 @@ import org.json.JSONObject
 class MiRepository {
     fun login(memberCode: String): Single<Login> {
         return Server.miApi.login(LoginRequest(memberCode)).map {
-            if(!it.isSuccessful){
+            if (!it.isSuccessful) {
                 val error = JSONObject(it.errorBody()!!.toString())
                 throw Throwable(error.getString("message"))
             }

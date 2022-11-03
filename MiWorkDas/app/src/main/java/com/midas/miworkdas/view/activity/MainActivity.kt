@@ -18,7 +18,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
     override fun observeViewModel() {
         getMemberCode()
         with(mViewModel) {
-            
+
         }
     }
 

@@ -14,7 +14,7 @@ class AddActivity : BaseActivity<ActivityAddBinding, AddViewModel>() {
         get() = R.layout.activity_add
 
     override fun observeViewModel() {
-        with(mViewModel){
+        with(mViewModel) {
 
         }
     }

@@ -23,10 +23,14 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>() {
             })
 
             loginSuccess.observe(this@LoginActivity, Observer {
-                if(it.success) {
+                if (it.success) {
                     when (it.code) {
                         0 -> {
-                            Toast.makeText(this@LoginActivity, "입력한 코드는 존재하지 않습니다.", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(
+                                this@LoginActivity,
+                                "입력한 코드는 존재하지 않습니다.",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
                         1 -> {
                             val intent = Intent(this@LoginActivity, AdminActivity::class.java)
