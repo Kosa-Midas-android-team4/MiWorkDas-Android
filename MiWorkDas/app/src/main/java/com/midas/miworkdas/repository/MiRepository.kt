@@ -2,6 +2,7 @@ package com.midas.miworkdas.repository
 
 import com.midas.miworkdas.model.Server
 import com.midas.miworkdas.model.request.MemberRequest
+import com.midas.miworkdas.model.request.NotifyRequest
 import com.midas.miworkdas.model.request.UserRequest
 import com.midas.miworkdas.model.response.*
 import io.reactivex.rxjava3.core.Single
@@ -72,7 +73,7 @@ class MiRepository {
         }
     }
 
-    fun userUpdate(request: UserRequest): Single<OnlyBoolean>{
+    fun userUpdate(request: NotifyRequest): Single<OnlyBoolean>{
         return Server.miApi.updateUser(request).map {
 
             if (!it.isSuccessful) {

@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.midas.miworkdas.Base.BaseViewModel
+import com.midas.miworkdas.model.request.NotifyRequest
 import com.midas.miworkdas.model.request.UserRequest
 import com.midas.miworkdas.model.response.OnlyBoolean
 import com.midas.miworkdas.repository.MiRepository
@@ -20,12 +21,16 @@ class ModifyViewModel : BaseViewModel() {
     private val _successModify = MutableLiveData<OnlyBoolean>()
     val successModify: LiveData<OnlyBoolean> get() = _successModify
 
-    fun modify(){
-        addDisposable(repository.userUpdate(UserRequest(inputName.value!!,
-            inputDepart.value!!,
-            inputRank.value!!,
-            inputPhone.value!!,
-            false)), object : DisposableSingleObserver<OnlyBoolean>(){
+    fun modify(key: String) {
+        addDisposable(repository.userUpdate(
+            NotifyRequest(
+                inputName.value!!,
+                inputDepart.value!!,
+                inputRank.value!!,
+                inputPhone.value!!,
+                key
+            )
+        ), object : DisposableSingleObserver<OnlyBoolean>() {
             override fun onSuccess(t: OnlyBoolean) {
                 _successModify.value = t
             }

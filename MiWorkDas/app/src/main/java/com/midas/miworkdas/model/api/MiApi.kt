@@ -1,6 +1,7 @@
 package com.midas.miworkdas.model.api
 
 import com.midas.miworkdas.model.request.MemberRequest
+import com.midas.miworkdas.model.request.NotifyRequest
 import com.midas.miworkdas.model.request.UserRequest
 import com.midas.miworkdas.model.response.*
 import io.reactivex.rxjava3.core.Single
@@ -28,5 +29,5 @@ interface MiApi {
     fun register(@Body request: UserRequest): Single<retrofit2.Response<Register>>
 
     @POST("updateUser")
-    fun updateUser(@Body request: UserRequest): Single<retrofit2.Response<OnlyBoolean>>
+    fun updateUser(@Body request: NotifyRequest): Single<retrofit2.Response<OnlyBoolean>>
 }

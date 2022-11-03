@@ -58,6 +58,7 @@ class UserDetailActivity : BaseActivity<ActivityUserDetailBinding, UserDetailVie
 
     fun onClickModifyBtn() {
         val intent = Intent(this, ModifyActivity::class.java)
+        intent.putExtra("key", memberCode)
         startActivity(intent)
     }
 
