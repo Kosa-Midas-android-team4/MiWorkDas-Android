@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="color_main">#0984e3</color>
+    <color name="color_login_background">#31B5FF</color>
+    <color name="color_login_background2">#F98E8E</color>
 </resources>

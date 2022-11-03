@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/background_login_button.xml" value="0.2475" />
+        <entry key="app/src/main/res/drawable/background_login_input.xml" value="0.2475" />
         <entry key="app/src/main/res/drawable/background_round_main.xml" value="0.2475" />
+        <entry key="app/src/main/res/drawable/background_white_round.xml" value="0.2475" />
+        <entry key="app/src/main/res/drawable/ic_miworkdas.xml" value="0.2475" />
         <entry key="app/src/main/res/layout/activity_admin.xml" value="0.14375" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.29490966796875" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.20325927734375004" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.24365942028985507" />
       </map>
     </option>
