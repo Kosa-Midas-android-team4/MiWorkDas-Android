@@ -58,9 +58,6 @@ class UserDetailActivity : BaseActivity<ActivityUserDetailBinding, UserDetailVie
 
     fun onClickModifyBtn() {
         val intent = Intent(this, ModifyActivity::class.java)
-        if (item != null) {
-            intent.putExtra("data", item.user)
-        }
         startActivity(intent)
     }
 

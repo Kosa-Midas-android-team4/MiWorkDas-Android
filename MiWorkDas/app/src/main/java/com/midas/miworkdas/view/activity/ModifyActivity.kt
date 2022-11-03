@@ -18,7 +18,6 @@ class ModifyActivity : BaseActivity<ActivityModifyBinding, ModifyViewModel>() {
         get() = R.layout.activity_modify
 
     override fun observeViewModel() {
-        getData()
         with(mViewModel) {
             onErrorEvent.observe(this@ModifyActivity, Observer {
                 Toast.makeText(this@ModifyActivity, "회원 정보 수정 중 문제가 발생했습니다.", Toast.LENGTH_SHORT).show()
@@ -32,15 +31,6 @@ class ModifyActivity : BaseActivity<ActivityModifyBinding, ModifyViewModel>() {
                 }
             })
         }
-    }
-
-    private fun getData() {
-        val data: Detail = intent.getSerializableExtra("data") as Detail
-
-        mViewModel.inputName.value = data.memberName
-        mViewModel.inputDepart.value = data.memberDepart
-        mViewModel.inputRank.value = data.memberRank
-        mViewModel.inputPhone.value = data.memberPhone
     }
 
     fun onClickModifyBtn(){

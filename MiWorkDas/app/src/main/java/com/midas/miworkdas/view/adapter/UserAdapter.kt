@@ -37,7 +37,7 @@ class UserAdapter(val context: Context): ListAdapter<User, UserAdapter.ViewHolde
             binding.usersView.setOnClickListener {
                 val intent = Intent(context, UserDetailActivity::class.java)
                 intent.putExtra("memberCode", user.memberCode)
-                context.applicationContext.startActivity(intent)
+                context.startActivity(intent)
             }
         }
 
