@@ -10,7 +10,73 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+<<<<<<< Updated upstream
         tools:context=".view.activity.LoginActivity">
 
+=======
+        android:background="@color/white"
+        tools:context=".view.activity.LoginActivity">
+
+        <EditText
+            android:id="@+id/login_etCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/background_login_input"
+            android:ems="10"
+            android:hint="회원 코드"
+            android:inputType="textPersonName"
+            android:padding="20dp"
+            android:text="@={vm.inputCode}"
+            android:textColor="@color/black"
+            android:textColorHint="#919191"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.45" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login_btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_login_button"
+            android:fontFamily="sans-serif-black"
+            android:onClick="@{() -> vm.onClickLoginBtn()}"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="로그인"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_etCode"
+            app:layout_constraintVertical_bias="0.3" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_miworkdas" />
+
+        <ImageView
+            android:id="@+id/view"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_ring2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+>>>>>>> Stashed changes
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

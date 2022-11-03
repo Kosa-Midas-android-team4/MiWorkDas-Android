@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="activity"
             type="com.midas.miworkdas.view.activity.MainActivity" />
@@ -16,8 +17,10 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/white"
         tools:context=".view.activity.MainActivity">
 
+<<<<<<< Updated upstream
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,5 +30,111 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+=======
+        <ImageView
+            android:id="@+id/main_imgLogo"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_miworkdas" />
+
+        <TextView
+            android:id="@+id/main_tvHello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/hello"
+            android:textColor="@color/black"
+            android:textSize="36sp"
+            android:fontFamily="sans-serif-black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_imgLogo" />
+
+        <TextView
+            android:id="@+id/main_tvDepart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            tools:text="안드로이드 개발부"
+            android:textSize="28sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_tvHello" />
+
+        <TextView
+            android:id="@+id/main_tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            tools:text="000 선임님"
+           android:textSize="28sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_tvDepart" />
+
+        <Button
+            android:id="@+id/main_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:text="출근하기"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:background="@drawable/background_mainbtn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_tvName"
+            app:layout_constraintVertical_bias="0.1" />
+
+        <TextView
+            android:id="@+id/main_tvLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="10시간 남았아요!" />
+
+        <TextView
+            android:id="@+id/main_tvHintTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/timeHint"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/main_progressTime"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/main_progressTime"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:minHeight="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/main_tvLeft"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:progress="40" />
+>>>>>>> Stashed changes
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

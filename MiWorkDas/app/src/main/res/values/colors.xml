@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+<<<<<<< Updated upstream
+=======
+
+    <color name="color_main">#0984e3</color>
+    <color name="color_login_background">#D7F1FF</color>
+    <color name="color_login_background2">#F98E8E</color>
+    <color name="color_recycler">#FAFAFA</color>
+>>>>>>> Stashed changes
 </resources>
