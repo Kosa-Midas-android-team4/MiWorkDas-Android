@@ -3,4 +3,5 @@
     <string name="hello">안녕하세요</string>
     <string name="timeHint">앞으로\n52시간까지</string>
     <string name="work">출근 했어요!</string>
+    <string name="today">오늘 총</string>
 </resources>

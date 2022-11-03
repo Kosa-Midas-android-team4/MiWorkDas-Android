@@ -9,7 +9,7 @@ import retrofit2.http.POST
 
 
 interface MiApi {
-    @POST("login")
+    @POST("login/")
     fun login(@Body request: LoginRequest): Single<retrofit2.Response<LoginResponse>>
 
 

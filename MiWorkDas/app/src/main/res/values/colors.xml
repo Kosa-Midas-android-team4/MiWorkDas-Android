@@ -12,4 +12,5 @@
     <color name="color_login_background">#D7F1FF</color>
     <color name="color_login_background2">#F98E8E</color>
     <color name="color_recycler">#FAFAFA</color>
+    <color name="color_hint">#919191</color>
 </resources>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.midas.miworkdas.view.activity.ModifyActivity" />
+
+        <variable
+            name="vm"
+            type="com.midas.miworkdas.viewmodel.ModifyViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".view.activity.ModifyActivity">
+
+        <ImageView
+            android:id="@+id/modify_imgLogo"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_miworkdas" />
+
+        <ImageButton
+            android:id="@+id/modify_btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+            android:padding="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_backbtn" />
+
+        <EditText
+            android:id="@+id/modify_etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/background_login_input"
+            android:padding="20dp"
+            android:hint="이름"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color_hint"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modify_btnBack" />
+
+        <EditText
+            android:id="@+id/modify_etDepart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/background_login_input"
+            android:padding="20dp"
+            android:hint="부서"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color_hint"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modify_etName" />
+
+        <EditText
+            android:id="@+id/modify_etRank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/background_login_input"
+            android:padding="20dp"
+            android:hint="직급"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color_hint"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modify_etDepart" />
+
+        <EditText
+            android:id="@+id/modify_etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/background_login_input"
+            android:padding="20dp"
+            android:hint="부서"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color_hint"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modify_etRank" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

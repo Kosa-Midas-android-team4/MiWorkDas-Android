@@ -7,10 +7,8 @@ import io.reactivex.rxjava3.core.Single
 import org.json.JSONObject
 
 class MiRepository {
-    private val api = Server.miApi
-
     fun login(memberCode: String): Single<LoginResponse> {
-        return api.login(LoginRequest(memberCode)).map {
+        return Server.miApi.login(LoginRequest(memberCode)).map {
             if(!it.isSuccessful){
                 val error = JSONObject(it.errorBody()!!.toString())
                 throw Throwable(error.getString("message"))
