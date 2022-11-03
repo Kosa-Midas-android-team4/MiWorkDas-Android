@@ -4,7 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="activity"
+            type="com.midas.miworkdas.view.activity.LoginActivity" />
 
+        <variable
+            name="vm"
+            type="com.midas.miworkdas.viewmodel.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -12,5 +18,52 @@
         android:layout_height="match_parent"
         tools:context=".view.activity.LoginActivity">
 
+        <EditText
+            android:id="@+id/login_etCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:ems="10"
+            android:padding="20dp"
+            android:inputType="textPersonName"
+            android:hint="회원 코드"
+            android:text="@={vm.inputCode}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login_btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_round_main"
+            android:paddingStart="28dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="28dp"
+            android:paddingBottom="16dp"
+            android:text="로그인"
+            android:onClick="@{() -> vm.onClickLoginBtn()}"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_etCode"
+            app:layout_constraintVertical_bias="0.15" />
+
+        <TextView
+            android:id="@+id/login_tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="MiWorkDas"
+            android:textSize="36sp"
+            android:fontFamily="sans-serif-black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
