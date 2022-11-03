@@ -1,5 +1,7 @@
 package com.midas.miworkdas.model.response
 
+import java.io.Serializable
+
 data class Detail(
     val memberCode: String,
     val isWorking: Int,
@@ -10,4 +12,4 @@ data class Detail(
     val memberIsAdmin: Int,
     val memberWeekHour: Int,
     val memberWorkDate: Int,
-)
+): Serializable

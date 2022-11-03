@@ -1,5 +1,5 @@
 package com.midas.miworkdas.model.response
 
-data class WorkStart(
+data class OnlyBoolean(
     val success: Boolean,
 )

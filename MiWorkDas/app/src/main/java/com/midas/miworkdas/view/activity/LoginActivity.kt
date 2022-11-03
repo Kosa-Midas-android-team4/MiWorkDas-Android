@@ -35,11 +35,13 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>() {
                         1 -> {
                             val intent = Intent(this@LoginActivity, AdminActivity::class.java)
                             startActivity(intent)
+                            finish()
                         }
                         else -> {
                             val intent = Intent(this@LoginActivity, MainActivity::class.java)
                             intent.putExtra("code", mViewModel.inputCode.value)
                             startActivity(intent)
+                            finish()
                         }
                     }
                 } else {

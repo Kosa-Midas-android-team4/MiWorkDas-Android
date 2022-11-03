@@ -14,8 +14,8 @@ class MainViewModel : BaseViewModel() {
     private val _getDetail = MutableLiveData<Detail>()
     val getDetail: LiveData<Detail> get() = _getDetail
 
-    private val _workStart = MutableLiveData<WorkStart>()
-    val workStart: LiveData<WorkStart> get() = _workStart
+    private val _workStart = MutableLiveData<OnlyBoolean>()
+    val workStart: LiveData<OnlyBoolean> get() = _workStart
 
     private val _workEnd = MutableLiveData<WorkEnd>()
     val workEnd: LiveData<WorkEnd> get() = _workEnd
@@ -25,7 +25,7 @@ class MainViewModel : BaseViewModel() {
     fun getDetail(memberCode: String){
         addDisposable(repository.getDetail(memberCode), object : DisposableSingleObserver<GetDetail>(){
             override fun onSuccess(t: GetDetail) {
-                _getDetail.value = t.detail
+                _getDetail.value = t.user
             }
 
             override fun onError(e: Throwable) {
@@ -37,8 +37,8 @@ class MainViewModel : BaseViewModel() {
     }
 
     fun workStart(memberCode: String){
-        addDisposable(repository.workStart(memberCode), object : DisposableSingleObserver<WorkStart>(){
-            override fun onSuccess(t: WorkStart) {
+        addDisposable(repository.workStart(memberCode), object : DisposableSingleObserver<OnlyBoolean>(){
+            override fun onSuccess(t: OnlyBoolean) {
                 _workStart.value = t
             }
 

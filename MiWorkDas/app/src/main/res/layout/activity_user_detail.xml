@@ -24,10 +24,10 @@
             android:id="@+id/detail_btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{() -> activity.finish()}"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:background="@android:color/transparent"
+            android:onClick="@{() -> activity.finish()}"
             android:padding="12dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -38,9 +38,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:padding="12dp"
-            android:background="@android:color/transparent"
             android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:onClick="@{() -> activity.onClickModifyBtn()}"
+            android:padding="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_fix" />
@@ -51,12 +52,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-black"
             android:textColor="@color/black"
             android:textSize="32sp"
-            android:fontFamily="sans-serif-black"
-            tools:text="안드로이드 개발부"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detail_btnBack" />
+            app:layout_constraintTop_toBottomOf="@+id/detail_btnBack"
+            tools:text="안드로이드 개발부" />
 
         <TextView
             android:id="@+id/detail_tvName"
@@ -64,38 +65,38 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
+            android:fontFamily="sans-serif-black"
             android:textColor="@color/black"
             android:textSize="32sp"
-            android:fontFamily="sans-serif-black"
-            tools:text="000 선임"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detail_tvDepart" />
+            app:layout_constraintTop_toBottomOf="@+id/detail_tvDepart"
+            tools:text="000 선임" />
 
         <TextView
             android:id="@+id/detail_tvPhone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-medium"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:fontFamily="sans-serif-medium"
-            tools:text="010-0000-0000"
             app:layout_constraintEnd_toEndOf="@+id/detail_tvName"
-            app:layout_constraintTop_toBottomOf="@+id/detail_tvName" />
+            app:layout_constraintTop_toBottomOf="@+id/detail_tvName"
+            tools:text="010-0000-0000" />
 
         <TextView
             android:id="@+id/detail_tvToday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
             android:textColor="@color/black"
             android:textSize="32sp"
-            android:fontFamily="sans-serif-black"
-            tools:text="오늘 총 : 8시간"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.55" />
+            app:layout_constraintVertical_bias="0.55"
+            tools:text="오늘 총 : 8시간" />
 
         <TextView
             android:id="@+id/detail_tvWeek"
@@ -103,12 +104,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginBottom="32dp"
+            android:fontFamily="sans-serif-black"
             android:textColor="@color/black"
             android:textSize="24sp"
-            android:fontFamily="sans-serif-black"
-            tools:text="32시간"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="32시간" />
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -118,8 +119,8 @@
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="24dp"
+            android:max="3120"
             android:minHeight="40dp"
-            android:max="52"
             app:layout_constraintBottom_toTopOf="@+id/detail_tvWeek"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

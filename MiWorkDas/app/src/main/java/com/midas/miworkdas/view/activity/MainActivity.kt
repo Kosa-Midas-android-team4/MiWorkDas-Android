@@ -46,7 +46,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
 
                 if (it.isWorking == 0 && it.memberWorkDate > 0) {
                     val hour: Int = (it.memberWorkDate / 60) / 60
-                    val min: Int = (it.memberWorkDate / 60) / 60
+                    val min: Int = (it.memberWorkDate / 60) % 60
                     mBinding.mainTvTodayhint.text = "오늘 ${hour}시간 ${min}분 일했어요"
                     mBinding.mainTvTodayhint.isVisible = true
                 }
@@ -54,7 +54,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
                 mBinding.mainProgressTime.progress = it.memberWeekHour / 60
 
                 val leftHour: Int = (it.memberWeekHour / 60) / 60
-                val leftMin: Int = (it.memberWeekHour / 60) / 60
+                val leftMin: Int = (it.memberWeekHour / 60) % 60
                 mBinding.mainTvLeft.text = "오늘 ${leftHour}시간 ${leftMin}분 일했어요"
             })
 
@@ -74,13 +74,13 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
             workEnd.observe(this@MainActivity, Observer {
                 if(it.success){
                     val hour: Int = (it.memberWorkTime.toInt() / 60) / 60
-                    val min: Int = (it.memberWorkTime.toInt() / 60) / 60
+                    val min: Int = (it.memberWorkTime.toInt() / 60) % 60
                     mBinding.mainTvTodayhint.text = "오늘 ${hour}시간 ${min}분 일했어요"
                     mBinding.mainTvTodayhint.isVisible = true
 
                     mBinding.mainProgressTime.progress = it.memberWeekHour / 60
                     val leftHour: Int = (it.memberWeekHour / 60) / 60
-                    val leftMin: Int = (it.memberWeekHour / 60) / 60
+                    val leftMin: Int = (it.memberWeekHour / 60) % 60
                     mBinding.mainTvLeft.text = "오늘 ${leftHour}시간 ${leftMin}분 일했어요"
 
                     mBinding.mainBtn.text = "출근하기"
