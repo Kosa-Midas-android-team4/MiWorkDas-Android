@@ -12,10 +12,12 @@
         <entry key="app/src/main/res/drawable/ic_miworkdas.xml" value="0.2475" />
         <entry key="app/src/main/res/drawable/ic_ring.xml" value="0.235" />
         <entry key="app/src/main/res/drawable/ic_ring2.xml" value="0.235" />
+        <entry key="app/src/main/res/layout/activity_add.xml" value="0.17760416666666667" />
         <entry key="app/src/main/res/layout/activity_admin.xml" value="0.2429550170898438" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.192584228515625" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.24527074841485505" />
-        <entry key="app/src/main/res/layout/activity_modify.xml" value="0.17760416666666667" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1700922205828238" />
+        <entry key="app/src/main/res/layout/activity_modify.xml" value="0.3879999796549479" />
+        <entry key="app/src/main/res/layout/activity_user_detail.xml" value="0.2580490112304688" />
         <entry key="app/src/main/res/layout/item_users.xml" value="0.45667335399682973" />
       </map>
     </option>

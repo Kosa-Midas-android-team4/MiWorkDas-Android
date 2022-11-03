@@ -4,4 +4,6 @@
     <string name="timeHint">앞으로\n52시간까지</string>
     <string name="work">출근 했어요!</string>
     <string name="today">오늘 총</string>
+    <string name="modify">수정 완료</string>
+    <string name="add">추가하기</string>
 </resources>

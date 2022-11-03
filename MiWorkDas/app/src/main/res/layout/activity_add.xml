@@ -4,37 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="activity"
-            type="com.midas.miworkdas.view.activity.ModifyActivity" />
+            type="com.midas.miworkdas.view.activity.AddActivity" />
 
         <variable
             name="vm"
-            type="com.midas.miworkdas.viewmodel.ModifyViewModel" />
+            type="com.midas.miworkdas.viewmodel.AddViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        tools:context=".view.activity.ModifyActivity">
+        tools:context=".view.activity.AddActivity">
 
         <ImageButton
-            android:id="@+id/modify_btnBack"
+            android:id="@+id/add_btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:onClick="@{() -> activity.finish()}"
             android:layout_marginTop="8dp"
             android:background="@android:color/transparent"
-            android:onClick="@{() -> activity.finish()}"
             android:padding="12dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_backbtn" />
 
         <EditText
-            android:id="@+id/modify_etName"
+            android:id="@+id/add_etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -48,10 +47,10 @@
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/modify_btnBack" />
+            app:layout_constraintTop_toBottomOf="@+id/add_btnBack" />
 
         <EditText
-            android:id="@+id/modify_etDepart"
+            android:id="@+id/add_etDepart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -65,10 +64,10 @@
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/modify_etName" />
+            app:layout_constraintTop_toBottomOf="@+id/add_etName" />
 
         <EditText
-            android:id="@+id/modify_etRank"
+            android:id="@+id/add_etRank"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -82,27 +81,27 @@
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/modify_etDepart" />
+            app:layout_constraintTop_toBottomOf="@+id/add_etDepart" />
 
         <EditText
-            android:id="@+id/modify_etPhone"
+            android:id="@+id/add_etPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="24dp"
             android:background="@drawable/background_login_input"
-            android:hint="부서"
+            android:hint="전화번호"
             android:padding="20dp"
             android:textColor="@color/black"
             android:textColorHint="@color/color_hint"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/modify_etRank" />
+            app:layout_constraintTop_toBottomOf="@+id/add_etRank" />
 
         <Button
-            android:id="@+id/modify_btn"
+            android:id="@+id/add_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -110,11 +109,12 @@
             android:layout_marginBottom="24dp"
             android:background="@drawable/background_login_button"
             android:padding="12dp"
-            android:text="@string/modify"
+            android:text="@string/add"
             android:textColor="@color/white"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
