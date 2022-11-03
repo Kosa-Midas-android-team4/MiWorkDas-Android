@@ -1,11 +1,11 @@
 package com.midas.miworkdas.model.response
 
-import java.io.Serializable
-
 data class User(
-    val memberCode: String,
+    val isWorking: Int,
+    val memberCode:String,
     val memberDepart: String,
-    val memberRank: String,
-    val memberPhone: String,
     val memberIsAdmin: Int,
+    val memberName: String,
+    val memberPhone: String,
+    val memberRank: String,
 )

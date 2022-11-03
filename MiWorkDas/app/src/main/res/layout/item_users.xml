@@ -4,10 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="user"
+            type="com.midas.miworkdas.model.response.User" />
     </data>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/users_view"
         android:layout_width="150dp"
         android:layout_height="200dp"
         android:layout_margin="20dp"
@@ -63,6 +66,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="16dp"
+                android:visibility="invisible"
                 android:background="@drawable/background_user_workview"
                 android:text="@string/work"
                 android:textSize="12sp"

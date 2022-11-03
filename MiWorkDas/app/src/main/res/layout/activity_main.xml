@@ -12,6 +12,7 @@
         <variable
             name="vm"
             type="com.midas.miworkdas.viewmodel.MainViewModel" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -95,7 +96,7 @@
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:text="10시간 남았아요!" />
+            tools:text="32시간 일 했어요!" />
 
         <TextView
             android:id="@+id/main_tvHintTime"
@@ -118,11 +119,12 @@
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="32dp"
+            android:max="3120"
             android:minHeight="40dp"
             app:layout_constraintBottom_toTopOf="@+id/main_tvLeft"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:progress="40" />
+            tools:progress="2120" />
 
         <TextView
             android:id="@+id/main_tvTodayhint"
@@ -132,6 +134,7 @@
             tools:text="오늘은 총 8시간 일했어요!"
             android:textColor="@color/black"
             android:textSize="24sp"
+            android:visibility="invisible"
             app:layout_constraintBottom_toTopOf="@+id/main_tvHintTime"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

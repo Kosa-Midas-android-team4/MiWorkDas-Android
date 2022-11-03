@@ -1,5 +1,5 @@
 package com.midas.miworkdas.model.request
 
-data class LoginRequest(
+data class MemberRequest(
     val memberCode: String,
 )
