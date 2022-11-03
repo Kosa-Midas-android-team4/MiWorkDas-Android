@@ -6,6 +6,8 @@ import retrofit2.http.POST
 
 
 interface MiApi {
+    /*
     @POST("login")
     fun login(@Body request: LoginRequest):
+    */
 }

@@ -4,7 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="activity"
+            type="com.midas.miworkdas.view.activity.LoginActivity" />
 
+        <variable
+            name="vm"
+            type="com.midas.miworkdas.viewmodel.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -4,7 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="activity"
+            type="com.midas.miworkdas.view.activity.AdminActivity" />
 
+        <variable
+            name="vm"
+            type="com.midas.miworkdas.viewmodel.AdminViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
