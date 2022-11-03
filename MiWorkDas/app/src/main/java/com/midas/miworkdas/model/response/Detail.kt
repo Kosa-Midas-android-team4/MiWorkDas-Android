@@ -1,6 +1,7 @@
 package com.midas.miworkdas.model.response
 
 data class Detail(
+    val memberCode: String,
     val isWorking: Int,
     val memberName: String,
     val memberDepart: String,

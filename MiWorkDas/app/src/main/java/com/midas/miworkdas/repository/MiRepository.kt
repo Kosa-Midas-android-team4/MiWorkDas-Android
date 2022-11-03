@@ -39,7 +39,7 @@ class MiRepository {
         }
     }
 
-    fun getAll(): Single<User>{
+    fun getAll(): Single<GetAll>{
         return Server.miApi.getAll().map {
             if (!it.isSuccessful) {
                 val error = JSONObject(it.errorBody()!!.toString())
@@ -49,7 +49,7 @@ class MiRepository {
         }
     }
 
-    fun getDetail(memberCode: String): Single<Detail>{
+    fun getDetail(memberCode: String): Single<GetDetail>{
         return Server.miApi.getDetail(MemberRequest(memberCode)).map {
             if (!it.isSuccessful) {
                 val error = JSONObject(it.errorBody()!!.toString())

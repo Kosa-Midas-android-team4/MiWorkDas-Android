@@ -4,9 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.midas.miworkdas.Base.BaseViewModel
-import com.midas.miworkdas.model.response.Detail
-import com.midas.miworkdas.model.response.WorkEnd
-import com.midas.miworkdas.model.response.WorkStart
+import com.midas.miworkdas.model.response.*
 import com.midas.miworkdas.repository.MiRepository
 import io.reactivex.rxjava3.observers.DisposableSingleObserver
 
@@ -25,9 +23,9 @@ class MainViewModel : BaseViewModel() {
 
 
     fun getDetail(memberCode: String){
-        addDisposable(repository.getDetail(memberCode), object : DisposableSingleObserver<Detail>(){
-            override fun onSuccess(t: Detail) {
-                _getDetail.value = t
+        addDisposable(repository.getDetail(memberCode), object : DisposableSingleObserver<GetDetail>(){
+            override fun onSuccess(t: GetDetail) {
+                _getDetail.value = t.detail
             }
 
             override fun onError(e: Throwable) {

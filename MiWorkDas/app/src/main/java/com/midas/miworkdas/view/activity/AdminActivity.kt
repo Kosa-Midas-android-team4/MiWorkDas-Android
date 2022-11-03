@@ -28,6 +28,7 @@ class AdminActivity : BaseActivity<ActivityAdminBinding, AdminViewModel>() {
             users.observe(this@AdminActivity, Observer {
                 if (it.success) {
                     if (it.success) {
+                        mBinding.recyclerView.adapter = adpater
                         adpater.submitList(it.userList)
                     } else {
                         Toast.makeText(this@AdminActivity, "문제가 발생했습니다.", Toast.LENGTH_SHORT).show()

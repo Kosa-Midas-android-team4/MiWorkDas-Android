@@ -61,6 +61,11 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
             workStart.observe(this@MainActivity, Observer {
                 if(it.success){
                     Toast.makeText(this@MainActivity, "오늘 하루도 화이팅!", Toast.LENGTH_SHORT).show()
+
+                    mBinding.mainBtn.text = "퇴근하기"
+                    mBinding.mainBtn.setOnClickListener {
+                        mViewModel.workEnd(memberCode)
+                    }
                 } else {
                     Toast.makeText(this@MainActivity, "출근 요청에 실패 했어요...", Toast.LENGTH_SHORT).show()
                 }
@@ -77,6 +82,11 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
                     val leftHour: Int = (it.memberWeekHour / 60) / 60
                     val leftMin: Int = (it.memberWeekHour / 60) / 60
                     mBinding.mainTvLeft.text = "오늘 ${leftHour}시간 ${leftMin}분 일했어요"
+
+                    mBinding.mainBtn.text = "출근하기"
+                    mBinding.mainBtn.setOnClickListener {
+                        mViewModel.workStart(memberCode)
+                    }
 
                 } else {
                     Toast.makeText(this@MainActivity, "퇴근 요청에 실패 했어요...", Toast.LENGTH_SHORT).show()

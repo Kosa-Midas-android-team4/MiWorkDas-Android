@@ -18,8 +18,8 @@ interface MiApi {
     fun workEnd(@Body request:MemberRequest): Single<retrofit2.Response<WorkEnd>>
 
     @POST("inquireUser/")
-    fun getAll(): Single<retrofit2.Response<User>>
+    fun getAll(): Single<retrofit2.Response<GetAll>>
 
     @POST("getUserAllInfo/")
-    fun getDetail(@Body request: MemberRequest): Single<retrofit2.Response<Detail>>
+    fun getDetail(@Body request: MemberRequest): Single<retrofit2.Response<GetDetail>>
 }
