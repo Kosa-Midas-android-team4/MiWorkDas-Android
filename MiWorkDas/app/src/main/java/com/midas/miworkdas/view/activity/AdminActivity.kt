@@ -5,16 +5,16 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import com.midas.miworkdas.Base.BaseActivity
 import com.midas.miworkdas.R
-import com.midas.miworkdas.databinding.ActivityMainBinding
-import com.midas.miworkdas.viewmodel.MainViewModel
+import com.midas.miworkdas.databinding.ActivityAdminBinding
+import com.midas.miworkdas.viewmodel.AdminViewModel
 
-class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
-    override val mViewModel: MainViewModel by viewModels()
+class AdminActivity : BaseActivity<ActivityAdminBinding, AdminViewModel>() {
+    override val mViewModel: AdminViewModel by viewModels()
     override val layoutRes: Int
-        get() = R.layout.activity_main
+        get() = R.layout.activity_admin
 
     override fun observeViewModel() {
-        with(mViewModel) {
+        with(mViewModel){
 
         }
     }
