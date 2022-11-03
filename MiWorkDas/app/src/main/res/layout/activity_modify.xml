@@ -115,6 +115,7 @@
             android:layout_marginBottom="24dp"
             android:background="@drawable/background_login_button"
             android:padding="12dp"
+            android:onClick="@{() -> activity.onClickModifyBtn()}"
             android:text="@string/modify"
             android:textColor="@color/white"
             android:textSize="24sp"

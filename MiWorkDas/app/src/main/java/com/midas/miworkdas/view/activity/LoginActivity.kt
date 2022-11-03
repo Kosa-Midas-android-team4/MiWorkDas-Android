@@ -52,7 +52,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>() {
     }
 
     fun onClickLoginBtn() {
-        if (mViewModel.inputCode.value?.length!! > 0) {
+        if (mViewModel.inputCode.value != "") {
             mViewModel.actionLogin()
         } else {
             Toast.makeText(this, "회원 코드를 입력해주세요", Toast.LENGTH_SHORT).show()

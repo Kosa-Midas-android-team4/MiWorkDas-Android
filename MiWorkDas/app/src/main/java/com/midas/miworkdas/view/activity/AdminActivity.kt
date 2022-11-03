@@ -1,5 +1,6 @@
 package com.midas.miworkdas.view.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -36,5 +37,10 @@ class AdminActivity : BaseActivity<ActivityAdminBinding, AdminViewModel>() {
                 }
             })
         }
+    }
+
+    fun onClickAddBtn(){
+        val intent = Intent(this, AddActivity::class.java)
+        startActivity(intent)
     }
 }

@@ -36,7 +36,7 @@ class ModifyActivity : BaseActivity<ActivityModifyBinding, ModifyViewModel>() {
 
     private fun getData() {
         val data: Detail = intent.getSerializableExtra("data") as Detail
-        
+
         mViewModel.inputName.value = data.memberName
         mViewModel.inputDepart.value = data.memberDepart
         mViewModel.inputRank.value = data.memberRank

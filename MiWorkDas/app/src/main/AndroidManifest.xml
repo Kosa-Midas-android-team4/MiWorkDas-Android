@@ -17,13 +17,13 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".AddActivity"
+            android:name=".view.activity.AddActivity"
             android:exported="false" />
         <activity
-            android:name=".UserDetailActivity"
+            android:name=".view.activity.UserDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".ModifyActivity"
+            android:name=".view.activity.ModifyActivity"
             android:exported="false" />
         <activity
             android:name=".view.activity.AdminActivity"
