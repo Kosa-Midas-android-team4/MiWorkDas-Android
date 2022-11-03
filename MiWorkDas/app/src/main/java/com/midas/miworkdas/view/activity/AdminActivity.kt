@@ -19,6 +19,11 @@ class AdminActivity : BaseActivity<ActivityAdminBinding, AdminViewModel>() {
 
     lateinit var adpater: UserAdapter
 
+    override fun onResume() {
+        super.onResume()
+        mViewModel.getAllUsers()
+    }
+
     override fun observeViewModel() {
         adpater = UserAdapter(this)
         with(mViewModel) {
