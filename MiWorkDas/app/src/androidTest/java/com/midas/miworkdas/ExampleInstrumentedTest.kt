@@ -1,4 +1,4 @@
-package com.campus.miworkdas
+package com.midas.miworkdas
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

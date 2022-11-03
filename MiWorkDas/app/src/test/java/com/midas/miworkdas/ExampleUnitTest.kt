@@ -1,4 +1,4 @@
-package com.campus.miworkdas
+package com.midas.miworkdas
 
 import org.junit.Test
 
