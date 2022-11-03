@@ -13,9 +13,16 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
     override val layoutRes: Int
         get() = R.layout.activity_main
 
-    override fun observeViewModel() {
-        with(mViewModel) {
+    private var memberCode: String = ""
 
+    override fun observeViewModel() {
+        getMemberCode()
+        with(mViewModel) {
+            
         }
+    }
+
+    private fun getMemberCode() {
+        memberCode = intent?.getStringExtra("code").toString()
     }
 }
