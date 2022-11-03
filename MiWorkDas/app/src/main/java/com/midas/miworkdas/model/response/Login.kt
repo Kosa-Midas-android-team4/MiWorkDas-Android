@@ -1,6 +1,7 @@
 package com.midas.miworkdas.model.response
 
-data class LoginResponse(
+data class Login(
     val success: Boolean,
     val code: Int,
+    val user: User?,
 )
